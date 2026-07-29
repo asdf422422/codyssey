@@ -15,7 +15,7 @@
 - Docker: 28.5.2
 - Git: 2.53.0
 <br>
-##2-1. 실행 방법
+## 2-1. 실행 방법
 
 ```bash
 uname -a
@@ -27,7 +27,7 @@ uname -a
 Darwin Kernel Version 24.6.0: Mon Jan 19 22:00: ...
 ```
 
-### Docker 버전 확인
+#### Docker 버전 확인
 
 ```bash
 docker --version
@@ -39,7 +39,7 @@ docker --version
 Docker version 28.5.2, build ...
 ```
 
-### Git 버전 확인
+#### Git 버전 확인
 
 ```bash
 git --version
@@ -51,7 +51,7 @@ git --version
 git version 2.53.0
 ```
 
-### Shell 확인
+#### Shell 확인
 
 ```bash
 echo $SHELL
@@ -62,6 +62,7 @@ echo $SHELL
 ```text
 /bin/zsh
 ```
-## 3. 수행 항목 체크리스트
-## 4. 검증 방법
-## 5. 트러블슈팅
+
+# 3. 수행 항목 체크리스트
+# 4. 검증 방법
+# 5. 트러블슈팅
