@@ -7,17 +7,33 @@
 - Git과 GitHub 사용 방법을 익히기
 
 최종적으로 같은 서비스를 여러 번 다른 컴퓨터에서 실행해도 재현되는 사고방식을 익히기
-
-
+<br>
 ## 2. 실행 환경
 - OS: macOS Sequoia 15.7.4 (Darwin 24.6.0)
 - Shell: Zsh(/bin/zsh)
 - Terminal: macOS 기본 터미널(Terminal.app)
 - Docker: 28.5.2
 - Git: 2.53.0
+<br>
+2-1. 실행 방법
+```Bash
+uname -a
+```
+@@@@ Darwin Kernel Version 24.6.0: Mon Jan 19 22:00: @@@@
+```Bash
+docker --version
+```
+Docker veersion 28.5.2, build @@@@
+```Bash
+git --version
+```
+git version 2.53.0
+```Bash
+echo $SHELL
+```
+/bin/zsh
 
-2-1. 
-
+<br>
 ## 3. 수행 항목 체크리스트
 ## 4. 검증 방법
 ## 5. 트러블슈팅
