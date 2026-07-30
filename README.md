@@ -19,8 +19,6 @@ https://app.notion.com/p/E1-1-3ac1d18148ce80ef954ff694df1c0541
 - Terminal: macOS 기본 터미널(Terminal.app)
 - Docker: 28.5.2
 - Git: 2.53.0
-<br>
-
 <details>
 <summary>확인 방법</summary>
 
@@ -72,7 +70,7 @@ echo $SHELL
 /bin/zsh
 ```
 </details>
-
+<br>
 
 ## 3. 수행 항목 체크리스트
 - [ ]  터미널
