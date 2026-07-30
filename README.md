@@ -129,6 +129,7 @@ echo $SHELL
 <br><br>
 ## 4. 검증 방법
 <details> <summary>4-1. 터미널 조작 로그 기록 </summary>
+    
 - A. 현재 위치 확인
 ```bash
 pwd
@@ -139,6 +140,7 @@ pwd
 ```text
 /Users/...
 ```
+<br> <br>
 - B. 목록 확인(숨김 파일 포함)
 ```bash
 ls -a
@@ -156,6 +158,7 @@ ls -a
 .ssh			Documents
 .Trash			Downloads
 ```
+<br> <br>
 - C. 이동
 ```bash
 ... ~ % cd codysseyEP1-1
@@ -166,6 +169,7 @@ ls -a
 ```text
 ... codysseyEP1-1 % 
 ```
+<br> <br>
 - D. 생성
 ```bash
 mkdir test
@@ -177,6 +181,7 @@ mkdir test
 ... codysseyEP1-1 % ls
 test
 ```
+<br> <br>
 - E. 복사
 ```bash
 cp -r test testcopy
@@ -188,6 +193,7 @@ cp -r test testcopy
 ... codysseyEP1-1 % ls
 test		testcopy
 ```
+<br> <br>
 - F. 이동/이름 변경
 이동
 ```bash
@@ -212,7 +218,7 @@ mv test.txt test2.txt
 ... test % ls
 test		test2.txt	testcopy
 ```
-
+<br> <br>
 - G. 삭제
 ```bash
 
@@ -223,6 +229,7 @@ test		test2.txt	testcopy
 ```text
 
 ```
+<br> <br>
 - H. 파일 내용 확인
 ```bash
 
@@ -233,6 +240,7 @@ test		test2.txt	testcopy
 ```text
 
 ```
+<br> <br>
 - I. 빈 파일 생성
 ```bash
 
@@ -243,6 +251,7 @@ test		test2.txt	testcopy
 ```text
 
 ```
+<br> <br>
 - J. 권한
 ```bash
 
@@ -256,8 +265,10 @@ test		test2.txt	testcopy
 </details>
 
 <details> <summary>4-2. Docker </summary>
+
 - 0. Docker란 무엇인가? 
 https://app.notion.com/p/Docker-3ad1d18148ce8070afc6f4b75f60174f
+<br> <br>
 - A. 버전 확인'
 ```bash
 
@@ -268,6 +279,7 @@ https://app.notion.com/p/Docker-3ad1d18148ce8070afc6f4b75f60174f
 ```text
 
 ```
+<br> <br>
 - B. 동작 여부 확인
 ```bash
 
@@ -278,6 +290,7 @@ https://app.notion.com/p/Docker-3ad1d18148ce8070afc6f4b75f60174f
 ```text
 
 ```
+<br> <br>
 - C. 이미지
 ```bash
 
@@ -288,6 +301,7 @@ https://app.notion.com/p/Docker-3ad1d18148ce8070afc6f4b75f60174f
 ```text
 
 ```
+<br> <br>
 - D. 컨테이너
 ```bash
 
@@ -298,6 +312,7 @@ https://app.notion.com/p/Docker-3ad1d18148ce8070afc6f4b75f60174f
 ```text
 
 ```
+<br> <br>
 - E. 운영
 ```bash
 
@@ -308,6 +323,7 @@ https://app.notion.com/p/Docker-3ad1d18148ce8070afc6f4b75f60174f
 ```text
 
 ```
+<br> <br>
 - F. hello-world 실행
 ```bash
 
@@ -318,6 +334,7 @@ https://app.notion.com/p/Docker-3ad1d18148ce8070afc6f4b75f60174f
 ```text
 
 ```
+<br> <br>
 - G. ubuntu 컨테이너
 ```bash
 
@@ -328,6 +345,7 @@ https://app.notion.com/p/Docker-3ad1d18148ce8070afc6f4b75f60174f
 ```text
 
 ```
+<br> <br>
 - H. 컨테이너 종료/유지
 ```bash
 
@@ -338,6 +356,8 @@ https://app.notion.com/p/Docker-3ad1d18148ce8070afc6f4b75f60174f
 ```text
 
 ```
+<br> <br>
+
 </details>
 
 ### 4-3. Dockerfile
