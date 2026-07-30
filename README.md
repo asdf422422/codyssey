@@ -20,8 +20,9 @@ https://app.notion.com/p/E1-1-3ac1d18148ce80ef954ff694df1c0541
 - Git: 2.53.0
 <br>
 
-### 2-1. 실행 방법
-
+<details>
+<summary>실행 방법</summary>
+- OS 버전 확인
 ```bash
 uname -a
 ```
@@ -32,7 +33,7 @@ uname -a
 Darwin Kernel Version 24.6.0: Mon Jan 19 22:00: ...
 ```
 <br> <br>
-##### Docker 버전 확인
+- Docker 버전 확인
 
 ```bash
 docker --version
@@ -44,7 +45,7 @@ docker --version
 Docker version 28.5.2, build ...
 ```
 <br> <br>
-##### Git 버전 확인
+- Git 버전 확인
 
 ```bash
 git --version
@@ -56,7 +57,7 @@ git --version
 git version 2.53.0
 ```
 <br> <br>
-##### Shell 확인
+- Shell 확인
 
 ```bash
 echo $SHELL
@@ -67,6 +68,7 @@ echo $SHELL
 ```text
 /bin/zsh
 ```
+</details>
 <br> <br>
 ## 3. 수행 항목 체크리스트
 - [ ]  터미널
