@@ -31,7 +31,7 @@ uname -a
 ```text
 Darwin Kernel Version 24.6.0: Mon Jan 19 22:00: ...
 ```
-
+<br> <br>
 ##### Docker 버전 확인
 
 ```bash
@@ -43,7 +43,7 @@ docker --version
 ```text
 Docker version 28.5.2, build ...
 ```
-
+<br> <br>
 ##### Git 버전 확인
 
 ```bash
@@ -55,7 +55,7 @@ git --version
 ```text
 git version 2.53.0
 ```
-
+<br> <br>
 ##### Shell 확인
 
 ```bash
@@ -125,16 +125,16 @@ echo $SHELL
 <br><br>
 ## 4. 검증 방법
 <details> <summary>4-1. 터미널 조작 로그 기록 </summary>
-#### A. 현재 위치 확인
-#### B. 목록 확인(숨김 파일 포함)
-#### C. 이동
-#### D. 생성
-#### E. 복사
-#### F. 이동/이름 변경
-#### G. 삭제
-#### H. 파일 내용 확인
-#### I. 빈 파일 생성
-#### J. 권한
+- A. 현재 위치 확인
+- B. 목록 확인(숨김 파일 포함)
+- C. 이동
+- D. 생성
+- E. 복사
+- F. 이동/이름 변경
+- G. 삭제
+- H. 파일 내용 확인
+- I. 빈 파일 생성
+- J. 권한
 </details>
 ### 4-2. Docker
 #### A. Docker란 무엇인가? 
