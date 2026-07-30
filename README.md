@@ -221,46 +221,66 @@ test		test2.txt	testcopy
 <br> <br>
 - G. 삭제
 ```bash
-
+rm -r testcopy
 ```
 
 실행 결과:
 
 ```text
-
+... codysseyEP1-1 % ls
+test
 ```
 <br> <br>
 - H. 파일 내용 확인
 ```bash
-
+cat test.txt
 ```
 
 실행 결과:
 
 ```text
-
+hi
+hello world
+3rd row
 ```
 <br> <br>
 - I. 빈 파일 생성
 ```bash
-
+touch test.txt
 ```
 
 실행 결과:
 
 ```text
-
+... codysseyEP1-1 % ls
+test		test.txt
 ```
 <br> <br>
 - J. 권한
+권한 확인
 ```bash
-
+ls -l
 ```
 
 실행 결과:
 
 ```text
+total 8
+drwxr-xr-x  3 ...  ...  96  7 30 20:53 test
+-rw-r--r--  1 ...  ...  23  7 30 21:09 test.txt
+```
+권한 변경
+```bash
+chmod 755 test.txt
+chmod o-r test
+```
 
+실행 결과:
+
+```text
+total 8
+drwxr-x--x  3 xhrl4224253  xhrl4224253  96  7 30 20:53 test
+-rwxr-xr-x  1 xhrl4224253  xhrl4224253  23  7 30 21:09 test.txt
 ```
 </details>
 
@@ -272,13 +292,13 @@ https://app.notion.com/p/Docker-3ad1d18148ce8070afc6f4b75f60174f
 <br> <br>
 - A. 버전 확인'
 ```bash
-
+docker --version
 ```
 
 실행 결과:
 
 ```text
-
+Docker version 28.5.2, build ...
 ```
 <br> <br>
 - B. 동작 여부 확인
