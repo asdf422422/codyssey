@@ -124,7 +124,7 @@ echo $SHELL
      
 <br><br>
 ## 4. 검증 방법
-### 4-1. 터미널 조작 로그 기록
+<details> <summary>4-1. 터미널 조작 로그 기록 </summary>
 #### A. 현재 위치 확인
 #### B. 목록 확인(숨김 파일 포함)
 #### C. 이동
@@ -135,7 +135,7 @@ echo $SHELL
 #### H. 파일 내용 확인
 #### I. 빈 파일 생성
 #### J. 권한
-
+</details>
 ### 4-2. Docker
 #### A. Docker란 무엇인가? 
 https://app.notion.com/p/Docker-3ad1d18148ce8070afc6f4b75f60174f
