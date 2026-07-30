@@ -266,7 +266,8 @@ test		test2.txt	testcopy
 
 <details> <summary>4-2. Docker </summary>
 
-- 0. Docker란 무엇인가? 
+- 0. Docker란 무엇인가?
+
 https://app.notion.com/p/Docker-3ad1d18148ce8070afc6f4b75f60174f
 <br> <br>
 - A. 버전 확인'
