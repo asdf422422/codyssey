@@ -130,27 +130,215 @@ echo $SHELL
 ## 4. 검증 방법
 <details> <summary>4-1. 터미널 조작 로그 기록 </summary>
 - A. 현재 위치 확인
+```bash
+pwd
+```
+
+실행 결과:
+
+```text
+/Users/...
+```
 - B. 목록 확인(숨김 파일 포함)
+```bash
+ls -a
+```
+
+실행 결과:
+
+```text
+.			.vscode			Library
+..			.zsh_history		Movies
+.CFUserTextEncoding	.zsh_sessions		Music
+.docker			Applications		OrbStack
+.DS_Store		codysseyEP1-1		Pictures
+.orbstack		Desktop			Public
+.ssh			Documents
+.Trash			Downloads
+```
 - C. 이동
+```bash
+... ~ % cd codysseyEP1-1
+```
+
+실행 결과:
+
+```text
+... codysseyEP1-1 % 
+```
 - D. 생성
+```bash
+mkdir test
+```
+
+실행 결과:
+
+```text
+... codysseyEP1-1 % ls
+test
+```
 - E. 복사
+```bash
+cp -r test testcopy
+```
+
+실행 결과:
+
+```text
+... codysseyEP1-1 % ls
+test		testcopy
+```
 - F. 이동/이름 변경
+이동
+```bash
+mv test.txt test
+```
+
+실행 결과:
+
+```text
+... test % ls
+test.txt
+```
+
+이름 변경
+```bash
+mv test.txt test2.txt
+```
+
+실행 결과:
+
+```text
+... test % ls
+test		test2.txt	testcopy
+```
+
 - G. 삭제
+```bash
+
+```
+
+실행 결과:
+
+```text
+
+```
 - H. 파일 내용 확인
+```bash
+
+```
+
+실행 결과:
+
+```text
+
+```
 - I. 빈 파일 생성
+```bash
+
+```
+
+실행 결과:
+
+```text
+
+```
 - J. 권한
+```bash
+
+```
+
+실행 결과:
+
+```text
+
+```
 </details>
-### 4-2. Docker
-#### A. Docker란 무엇인가? 
+
+<details> <summary>4-2. Docker </summary>
+- 0. Docker란 무엇인가? 
 https://app.notion.com/p/Docker-3ad1d18148ce8070afc6f4b75f60174f
-#### A. 버전 확인
-#### B. 동작 여부 확인
-#### C. 이미지
-#### D. 컨테이너
-#### E. 운영
-#### F. hello-world 실행 
-#### G. ubuntu 컨테이너
-#### H. 컨테이너 종료/유지
+- A. 버전 확인'
+```bash
+
+```
+
+실행 결과:
+
+```text
+
+```
+- B. 동작 여부 확인
+```bash
+
+```
+
+실행 결과:
+
+```text
+
+```
+- C. 이미지
+```bash
+
+```
+
+실행 결과:
+
+```text
+
+```
+- D. 컨테이너
+```bash
+
+```
+
+실행 결과:
+
+```text
+
+```
+- E. 운영
+```bash
+
+```
+
+실행 결과:
+
+```text
+
+```
+- F. hello-world 실행
+```bash
+
+```
+
+실행 결과:
+
+```text
+
+```
+- G. ubuntu 컨테이너
+```bash
+
+```
+
+실행 결과:
+
+```text
+
+```
+- H. 컨테이너 종료/유지
+```bash
+
+```
+
+실행 결과:
+
+```text
+
+```
+</details>
 
 ### 4-3. Dockerfile
 ### 4-4. 포트
