@@ -21,7 +21,7 @@ https://app.notion.com/p/E1-1-3ac1d18148ce80ef954ff694df1c0541
 <br>
 
 <details>
-<summary>실행 방법</summary>
+<summary>확인 방법</summary>
 - OS 버전 확인
 ```bash
 uname -a
@@ -69,7 +69,9 @@ echo $SHELL
 /bin/zsh
 ```
 </details>
+
 <br> <br>
+
 ## 3. 수행 항목 체크리스트
 - [ ]  터미널
     - 다음 작업을 터미널로 수행하고, 명령어 + 출력 결과를 기술 문서에 기록한다.
