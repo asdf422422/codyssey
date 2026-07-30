@@ -23,6 +23,7 @@ https://app.notion.com/p/E1-1-3ac1d18148ce80ef954ff694df1c0541
 <details>
 <summary>확인 방법</summary>
 - OS 버전 확인
+    
 ```bash
 uname -a
 ```
