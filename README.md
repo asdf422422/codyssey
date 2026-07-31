@@ -704,13 +704,134 @@ Hello Ubuntu
 
 
 <details> <summary>4-3. Dockerfile </summary>
-</details>
+
 
 (A) 웹 서버 베이스 이미지 활용(예: NGINX/Apache 등) + 정적 콘텐츠/설정만 교체
 
-어떤 “기존 베이스(이미지/예시 Dockerfile)”를 선택했는지
-내가 적용한 커스텀 포인트 각각의 목적(간단 요약)
-빌드/실행 명령 + 핵심 결과(출력/스크린샷)
+1. 어떤 “기존 베이스(이미지/예시 Dockerfile)”를 선택했는지
+: **nginx**
+
+2. 내가 적용한 커스텀 포인트 각각의 목적(간단 요약)
+: 
+
+3. 빌드/실행 명령 + 핵심 결과(출력/스크린샷)
+<details> <summary>빌드 명령 </summary>
+
+```bash
+touch Dockerfile index.html
+nano Dockerfile
+nano index.html
+```
+
+Dockerfile 수정 
+```bash
+FROM nginx:la›test
+COPY index.html /usr/share/nginx/html/index.html
+EXPOSE 80 #포트
+```
+
+index.html 수정 
+```bash
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hello Docker</title>
+</head>
+<body>
+<h1>Hello Docker!</h1>
+</body>
+</html>
+```
+
+빌드
+```bash
+docker build -t my-web .
+```
+
+실행 결과:
+
+```text
+[+] Building 8.0s (7/7) FINISHED                                docker:orbstack
+ => [internal] load build definition from Dockerfile                       0.2s
+ => => transferring dockerfile: 116B                                       0.0s
+ => [internal] load metadata for docker.io/library/nginx:latest            2.4s
+ => [internal] load .dockerignore                                          0.1s
+ => => transferring context: 2B                                            0.0s
+ => [1/2] FROM docker.io/library/nginx:latest@sha256:5a88c9c45479443d7be2  4.3s
+ => => resolve docker.io/library/nginx:latest@sha256:5a88c9c45479443d7be2  0.2s
+ => => sha256:4e5db4761e0ff445f7fd29aad680ad28e8abf7d2048 9.09kB / 9.09kB  0.0s
+ => => sha256:062e450697faa5f02a3a74eba9864ee4d79bc9cfb 29.78MB / 29.78MB  0.7s
+ => => sha256:5a88c9c45479443d7be2eadc894b4ed0a9801bae0 10.23kB / 10.23kB  0.0s
+ => => sha256:db4f612f385437d11eb26620a4f1d7efb3ff44e1296 2.29kB / 2.29kB  0.0s
+ => => sha256:3c7ab7949321f47c96fc0918f9f72e8f51bd452cdef1e0d 626B / 626B  0.7s
+ => => sha256:82454cdbf456a77f9ff1bb88b121c2a739e38c30e 33.33MB / 33.33MB  1.0s
+ => => extracting sha256:062e450697faa5f02a3a74eba9864ee4d79bc9cfbd65769f  1.1s
+ => => sha256:cacfcdd01f309c65d69372716e799ea741065ac1b1e6088 955B / 955B  1.0s
+ => => sha256:b6698f04e005497a7f495c0719358d43890cb3997ad7b4a 403B / 403B  1.1s
+ => => sha256:2bedaf25031a24fb70b9dc2d56cb17139186d1ae5fd 1.21kB / 1.21kB  1.2s
+ => => sha256:d26f27cc8c41e321394cb3c9a80915d90d5f1f1d3cb 1.40kB / 1.40kB  1.3s
+ => => extracting sha256:82454cdbf456a77f9ff1bb88b121c2a739e38c30ea689c13  0.7s
+ => => extracting sha256:3c7ab7949321f47c96fc0918f9f72e8f51bd452cdef1e0da  0.0s
+ => => extracting sha256:cacfcdd01f309c65d69372716e799ea741065ac1b1e60880  0.0s
+ => => extracting sha256:b6698f04e005497a7f495c0719358d43890cb3997ad7b4ab  0.0s
+ => => extracting sha256:2bedaf25031a24fb70b9dc2d56cb17139186d1ae5fd2054e  0.0s
+ => => extracting sha256:d26f27cc8c41e321394cb3c9a80915d90d5f1f1d3cbbbcda  0.0s
+ => [internal] load build context                                          0.2s
+ => => transferring context: 157B                                          0.0s
+ => [2/2] COPY index.html /usr/share/nginx/html/index.html                 0.4s
+ => exporting to image                                                     0.3s
+ => => exporting layers                                                    0.2s
+ => => writing image sha256:034b906152eb442a0453f93ba92d8cdec5d158b374ce0  0.0s
+ => => naming to docker.io/library/my-web                                  0.0s
+```
+
+</details>
+
+<details> <summary>실행 명령 </summary>
+    
+```bash
+docker run -p 8080:80 my-web
+```
+
+실행 결과:
+
+```text
+/docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+/docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+/docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+/docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+/docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+/docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+/docker-entrypoint.sh: Configuration complete; ready for start up
+2026/07/31 04:56:15 [notice] 1#1: using the "epoll" event method
+2026/07/31 04:56:15 [notice] 1#1: nginx/1.31.3
+2026/07/31 04:56:15 [notice] 1#1: built by gcc 14.2.0 (Debian 14.2.0-19) 
+2026/07/31 04:56:15 [notice] 1#1: OS: Linux 6.17.8-orbstack-00308-g8f9c941121b1
+2026/07/31 04:56:15 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 20480:1048576
+2026/07/31 04:56:15 [notice] 1#1: start worker processes
+2026/07/31 04:56:15 [notice] 1#1: start worker process 29
+2026/07/31 04:56:15 [notice] 1#1: start worker process 30
+2026/07/31 04:56:15 [notice] 1#1: start worker process 31
+2026/07/31 04:56:15 [notice] 1#1: start worker process 32
+2026/07/31 04:56:15 [notice] 1#1: start worker process 33
+2026/07/31 04:56:15 [notice] 1#1: start worker process 34
+(IP) - - [31/Jul/2026:04:57:57 +0000] "GET / HTTP/1.1" 200 120 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36" "-"
+(IP) - - [31/Jul/2026:04:57:57 +0000] "GET /favicon.ico HTTP/1.1" 404 555 "http://localhost:8080/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36" "-"
+2026/07/31 04:57:57 [error] 29#29: *1 open() "/usr/share/nginx/html/favicon.ico" failed (2: No such file or directory), client: 192.168.215.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8080", referrer: "http://localhost:8080/"
+2026/07/31 04:58:32 [notice] 1#1: signal 28 (SIGWINCH) received
+2026/07/31 04:58:32 [notice] 1#1: signal 28 (SIGWINCH) received
+
+```
+</details>
+
+<br> <br>
+
+</details>
+
+
+
 ```bash
 
 ```
@@ -721,8 +842,6 @@ Hello Ubuntu
 
 ```
 <br> <br>
-
-
 
 <details> <summary>4-4. 포트 </summary>
 </details>
