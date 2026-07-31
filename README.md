@@ -282,6 +282,7 @@ total 8
 drwxr-x--x  3 (사용자)  (사용자)  96  7 30 20:53 test
 -rwxr-xr-x  1 (사용자)  (사용자)  23  7 30 21:09 test.txt
 ```
+<br> <br>
 </details>
 
 <details> <summary>4-2. Docker </summary>
@@ -424,6 +425,10 @@ docker images
 ```text
 REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
 ```
+
+<br> <br>
+
+
 이미지 다운로드 
 ```bash
 docker pull ubuntu
@@ -463,6 +468,10 @@ Digest: sha256:5a88c9c45479443d7be2eadc894b4ed0a9801bae03d97a5760ae13b5c2005942
 Status: Downloaded newer image for nginx:latest
 682e3d59fee0fa0dc84b1215c95555fde07191f82aaf09517686ad005cf1f238
 ```
+
+<br> <br>
+
+
 정지
 ```bash
 docker stop mynginx
@@ -473,6 +482,10 @@ docker stop mynginx
 ```text
 mynginx
 ```
+
+<br> <br>
+
+
 목록 보기
 ```bash
 docker ps -a
@@ -599,8 +612,11 @@ docker logs mynginx
 ```
 
 </details>
+
 <br> <br>
+
 리소스 확인
+
 ```bash
 docker stats mynginx
 ```
@@ -661,6 +677,9 @@ docker run -it --name myubuntu ubuntu bash
 ```text
 root@dfe9a6265ec6:/# 
 ```
+
+<br> <br>
+
 ls
 ```bash
 ls
@@ -671,6 +690,9 @@ ls
 ```text
 bin  boot  dev  etc  home  lib  lib64  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
 ```
+
+<br> <br>
+
 echo
 ```bash
 echo "Hello Ubuntu"
@@ -697,6 +719,8 @@ Hello Ubuntu
 - 서비스 제공 가능
 - 로그 확인, 접속, 요청 처리 가능```bash
 
+<br> <br>
+<br> <br>
 
 </details>
 
@@ -784,6 +808,7 @@ docker build -t my-web .
  => => writing image sha256:034b906152eb442a0453f93ba92d8cdec5d158b374ce0  0.0s
  => => naming to docker.io/library/my-web                                  0.0s
 ```
+<br> <br>
 
 </details>
 
@@ -924,6 +949,8 @@ branch.EP1-1.vscode-merge-base=origin/EP1-1
 연동 증거
 https://app.notion.com/p/Git-GitHub-3ad1d18148ce8032884df9790724bab9?source=copy_link#3ae1d18148ce803588d5edf99cb2d509
 
+<br> <br>
+
 </details>
 
 
@@ -944,6 +971,7 @@ CONTAINER ID   IMAGE     COMMAND       CREATED         STATUS                   
 ```
 docker run-it ubuntu
 ```
+<br> <br>
 
 ### 5-2. GitHub push 충돌
 - 문제: GitHub push가 작동하지 않음
