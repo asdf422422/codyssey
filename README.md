@@ -194,7 +194,7 @@ cp -r test testcopy
 test		testcopy
 ```
 <br> <br>
-- F. 이동/이름 변경
+- F. 이동/이름 변경 
 이동
 ```bash
 mv test.txt test
@@ -834,7 +834,7 @@ docker run -p 8080:80 my-web
 
 <details> <summary>4-4. 마운트/볼륨 </summary>
 
-**1. 마운트 바인드**
+**1. 마운트 바인드** <br>
 A. 컨테이너 실행 전 파일 생성
 ```bash
 mkdir persistTest
@@ -863,7 +863,7 @@ changed inside container
 ```
 <br> <br>
 
-**2. 볼륨**
+**2. 볼륨** <br>
 A. 볼륨 생성
 ```bash
 docker volume create ubuntu-data
@@ -896,20 +896,78 @@ volume persistent data
 </details>
 
 <details> <summary>4-5. Git/GitHub </summary>
-```bash
 
+Git 설정 확인
+```bash
+git config --list
 ```
 
 실행 결과:
 
 ```text
-
+credential.helper=osxkeychain
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+core.ignorecase=true
+core.precomposeunicode=true
+remote.origin.url=https://github.com/asdf422422/codyssey
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.main.remote=origin
+branch.main.merge=refs/heads/main
+branch.EP1-1.remote=origin
+branch.EP1-1.merge=refs/heads/EP1-1
+branch.EP1-1.vscode-merge-base=origin/EP1-1
 ```
 <br> <br>
-    
+연동 증거
+https://app.notion.com/p/Git-GitHub-3ad1d18148ce8032884df9790724bab9?source=copy_link#3ae1d18148ce803588d5edf99cb2d509
+
 </details>
 
 
 ## 5. 트러블슈팅
-### 5-1.
-### 5-2.
+### 5-1. 컨테이너가 켜지지 않음
+- 문제: 컨테이너를 켰을 때 입력창 및 터미널 창이 활성화되지 않음
+- 원인 가설: -it(입력창과 터밈널창)을 할당하지 않아서 컨테이너가 실행 되지 않음
+- 확인: 프로세스 목록 확인
+```
+docker ps -a
+```
+실행 결과: 
+```
+CONTAINER ID   IMAGE     COMMAND       CREATED         STATUS                     PORTS     NAMES
+17f185ec2941   ubuntu    "/bin/bash"   4 seconds ago   Exited (0) 3 seconds ago             kind_chaplygin
+```
+- 해결/대안: 컨테이너를 대화형 모드로 실행
+```
+docker run-it ubuntu
+```
+
+### 5-2. GitHub push 충돌
+- 문제: GitHub push가 작동하지 않음
+```
+Username for 'https://github.com': asdf422422
+Password for 'https://asdf422422@github.com':
+To https://github.com/asdf422422/codyssey
+! \[rejected\]        EP1-1 -\> EP1-1 (fetch first)
+error: 레퍼런스를 'https://github.com/asdf422422/codyssey'에 푸시하는데 실패했습니다
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+```
+- 원인 가설: GitHub에 로컬 저장소에는 없는 새로운 커밋이 존재한다
+- 확인: 정보 업데이트 해보기
+```
+git pull origin EP1-1 --rebase
+```
+- 해결/대안: 업데이트 후 다시 push
+```
+git push origin EP1-1
+```
+
+
+
