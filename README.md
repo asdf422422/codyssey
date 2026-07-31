@@ -712,7 +712,7 @@ Hello Ubuntu
 : **nginx**
 
 2. 내가 적용한 커스텀 포인트 각각의 목적(간단 요약)
-: 
+: **쉽게 적용될 수 있도록 간단한 내용으로 바꿈**
 
 3. 빌드/실행 명령 + 핵심 결과(출력/스크린샷)
 <details> <summary>빌드 명령 </summary>
@@ -826,12 +826,76 @@ docker run -p 8080:80 my-web
 ```
 </details>
 
+접속 증거: https://app.notion.com/p/Dockerfile-3ad1d18148ce80afa160c49f8f97c84a?source=copy_link#3ae1d18148ce80a8a04ad0fc3b3341c6
 <br> <br>
 
 </details>
 
 
+<details> <summary>4-4. 마운트/볼륨 </summary>
 
+**1. 마운트 바인드**
+A. 컨테이너 실행 전 파일 생성
+```bash
+mkdir persistTest
+cd persistTest
+echo “host file before container” > test.txt
+```
+B. 컨테이너 생성
+```bash 
+docker run -it --name bind-test -v /Users/(사용자)/codysseyEP1-1/codyssey/persistTest:/data ubuntu bash
+```
+C. 컨테이너 내부 파일 수정
+```bash 
+echo "changed inside container" > /data/test.txt
+```
+D. 컨테이너 제거
+```bash 
+docker rm bind-test
+```
+E. 파일 확인 
+```bash
+cat test.txt
+```
+실행 결과: 
+```
+changed inside container
+```
+<br> <br>
+
+**2. 볼륨**
+A. 볼륨 생성
+```bash
+docker volume create ubuntu-data
+```
+
+B. 컨테이너 생성 및 볼륨에 연결
+```bash
+docker run -it --name volume-test -v ubuntu-data:/data ubuntu bash
+```
+C. 컨테이너 내부 파일 생성
+```bash
+echo "volume persistent data" > /data/test.txt
+cat /data/test.txt
+```
+D. 컨테이너 삭제
+```bash
+docker rm volume-test
+```
+E. 새 컨테이너 생성 후 데이터 확인
+```bash
+docker run -it --name volume-test-new -v ubuntu-data:/data ubuntu bash
+cat /data/test.txt
+```
+
+실행 결과:
+
+```text
+volume persistent data
+```
+</details>
+
+<details> <summary>4-5. Git/GitHub </summary>
 ```bash
 
 ```
@@ -842,19 +906,9 @@ docker run -p 8080:80 my-web
 
 ```
 <br> <br>
-
-<details> <summary>4-4. 포트 </summary>
+    
 </details>
 
-<details> <summary>4-5. 마운트 </summary>
-</details>
-
-<details> <summary>4-6. 볼륨 </summary>
-</details>
-<details> <summary>4-7. Git </summary>
-</details>
-<details> <summary>4-8. GitHub </summary>
-</details>
 
 ## 5. 트러블슈팅
 ### 5-1.
