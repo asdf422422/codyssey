@@ -306,7 +306,8 @@ Docker version 28.5.2, build ecc6942
 docker info
 ```
 
-<details> <summary>4-2. Docker </summary>
+<details> <summary>실행 결과 </summary>
+
 ```text
 Client:
  Version:    28.5.2
@@ -407,6 +408,7 @@ WARNING: DOCKER_INSECURE_NO_IPTABLES_RAW is set
 ```
 
 </details>
+
 
 
 <br> <br>
