@@ -405,7 +405,9 @@ Server:
 
 WARNING: DOCKER_INSECURE_NO_IPTABLES_RAW is set
 ```
+
 </details>
+
 
 <br> <br>
 - C. 이미지
@@ -594,7 +596,7 @@ docker logs mynginx
 ```
 
 </details>
-
+<br> <br>
 리소스 확인
 ```bash
 docker stats mynginx
