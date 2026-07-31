@@ -290,7 +290,7 @@ drwxr-x--x  3 (사용자)  (사용자)  96  7 30 20:53 test
 
 https://app.notion.com/p/Docker-3ad1d18148ce8070afc6f4b75f60174f
 <br> <br>
-- A. 버전 확인'
+- A. 버전 확인
 ```bash
 docker --version
 ```
@@ -412,7 +412,8 @@ WARNING: DOCKER_INSECURE_NO_IPTABLES_RAW is set
 
 
 <br> <br>
-- C. 이미지
+
+- C. 이미지 <br>
 이미지 목록 확인
 ```bash
 docker images
@@ -682,6 +683,34 @@ Hello Ubuntu
 ```
 <br> <br>
 - H. 컨테이너 종료/유지
+
+#### 컨테이너 종료
+
+- 컨테이너의 *주 프로세스(PID 1)가 끝난 상태*
+- 컨테이너 자체는 남아 있을 수 있지만 실행은 멈춤
+- CPU, 메모리를 사용하지 않음
+- 다시 시작할 수 있음
+
+#### 컨테이너 유지 (Running)
+
+- 컨테이너의 *주 프로세스가 계속 실행 중인 상태*
+- 서비스 제공 가능
+- 로그 확인, 접속, 요청 처리 가능```bash
+
+
+</details>
+
+
+
+
+<details> <summary>4-3. Dockerfile </summary>
+</details>
+
+(A) 웹 서버 베이스 이미지 활용(예: NGINX/Apache 등) + 정적 콘텐츠/설정만 교체
+
+어떤 “기존 베이스(이미지/예시 Dockerfile)”를 선택했는지
+내가 적용한 커스텀 포인트 각각의 목적(간단 요약)
+빌드/실행 명령 + 핵심 결과(출력/스크린샷)
 ```bash
 
 ```
@@ -693,14 +722,20 @@ Hello Ubuntu
 ```
 <br> <br>
 
+
+
+<details> <summary>4-4. 포트 </summary>
 </details>
 
-### 4-3. Dockerfile
-### 4-4. 포트
-### 4-5. 마운트
-### 4-6. 볼륨
-### 4-7. Git
-### 4-8. GitHub
+<details> <summary>4-5. 마운트 </summary>
+</details>
+
+<details> <summary>4-6. 볼륨 </summary>
+</details>
+<details> <summary>4-7. Git </summary>
+</details>
+<details> <summary>4-8. GitHub </summary>
+</details>
 
 ## 5. 트러블슈팅
 ### 5-1.
