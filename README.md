@@ -852,6 +852,8 @@ docker run -p 8080:80 my-web
 </details>
 
 접속 증거: https://app.notion.com/p/Dockerfile-3ad1d18148ce80afa160c49f8f97c84a?source=copy_link#3ae1d18148ce80a8a04ad0fc3b3341c6
+<img width="2008" height="974" alt="image" src="https://github.com/user-attachments/assets/ee5e15d6-94ad-487e-9c2e-3b5746652d1b" />
+
 <br> <br>
 
 </details>
@@ -949,6 +951,7 @@ branch.EP1-1.vscode-merge-base=origin/EP1-1
 <br> <br>
 연동 증거
 https://app.notion.com/p/Git-GitHub-3ad1d18148ce8032884df9790724bab9?source=copy_link#3ae1d18148ce803588d5edf99cb2d509
+<img width="2622" height="1824" alt="image" src="https://github.com/user-attachments/assets/46db9128-ac86-4034-9ff8-b7b3a3d08262" />
 
 <br> <br>
 
