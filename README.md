@@ -973,7 +973,7 @@ CONTAINER ID   IMAGE     COMMAND       CREATED         STATUS                   
 ```
 - 해결/대안: 컨테이너를 대화형 모드로 실행
 ```
-docker run-it ubuntu
+docker run -it ubuntu
 ```
 <br> <br>
 
